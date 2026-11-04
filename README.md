@@ -58,3 +58,43 @@ The project will use suitable public or synthetic data for development. No ident
 ## Team
 
 Data Analytics Internship — Infotact Solutions
+
+
+# CareFlow – Process Mining & Analytics
+
+## Overview
+This module analyzes clinical event logs using Python and PM4Py to discover patient pathways, identify repeated activities, and examine transition times.
+
+## Dataset Summary
+- Total events: 9,855
+- Unique patient cases: 1,428
+- Unique activities: 11
+- Unique journey patterns: 7
+
+## Process Mining
+- Prepared and validated the event log.
+- Discovered the process tree using PM4Py.
+- Generated a Petri net process model.
+- Evaluated the discovered model using token-based replay fitness and precision.
+
+## Key Findings
+- 172 cases (12.04%) contain a specimen re-draw loop.
+- 8,427 transitions have recorded elapsed-time values.
+- 13 distinct activity transitions were analyzed.
+- Five candidate bottleneck transitions were identified for further investigation.
+
+## Evaluation
+- Token-based replay fitness: 100%
+- Process model precision: 0.8804
+
+## Output Files
+- `careflow_process_tree.txt`
+- `careflow_process_model.pnml`
+- `careflow_petri_net.png`
+- `careflow_analytical_summary.csv`
+
+## Tools & Technologies
+Python, Pandas, PM4Py, Google Colab
+
+## Limitations
+The findings describe the available dataset. Candidate bottlenecks require further investigation, and observed associations do not establish causation. The real-world provenance and interpretation of elapsed-time fields should be verified.
